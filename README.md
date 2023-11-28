@@ -1,6 +1,6 @@
 # graph2viz
 
-`graph2viz` an open-source platform to easily visualize graphs (networks), check some exploratory informations, and train graph neural networks.
+`graph2viz` is an open-source platform to easily visualize graphs (networks), check some exploratory information, and explain graph neural networks outputs.
 
 ### Questions
 
