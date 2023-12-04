@@ -1,11 +1,14 @@
-from torch_geometric.datasets import TUDataset, KarateClub, Planetoid, AmazonProducts
+from torch_geometric.datasets import TUDataset, KarateClub, Planetoid, Amazon, Actor, Coauthor
 from torch_geometric.loader import DataLoader
 
 datasets = {
     "TUDataset": TUDataset(root='/tmp/ENZYMES', name='ENZYMES', use_node_attr=True),
     "KarateClub": KarateClub(),
     "Planetoid": Planetoid(root='/tmp/Cora', name="Cora"),
-    #"Amazon": AmazonProducts(root='/tmp/Amazon')
+    "AmazonComputers": Amazon(root='/tmp/Amazon', name = "Computers"),
+    "AmazonPhoto": Amazon(root='/tmp/Amazon', name = "Photo"),
+    "Actor": Actor(root='/tmp/Actor'),
+    "Coauthor": Coauthor(name='CS', root='/tmp/Coauthor')
     }
 
 def read_data(dataset_name):

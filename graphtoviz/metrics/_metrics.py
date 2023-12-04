@@ -1,6 +1,7 @@
 import networkx as nx
+import torch_geometric
 
-def summary_metrics(graph):
+def summary_metrics(data):
     """Computes the summary metrics of the graph.
 
     Args:
@@ -9,20 +10,19 @@ def summary_metrics(graph):
     Returns:
         dict: Dictionary containing the summary metrics.
     """
+    if not isinstance(data, nx.Graph):
+        graph = torch_geometric.utils.to_networkx(data)
+    else :
+        graph = data
 
     import numpy as np
     summary = {}
-    summary["betweenness_centrality"] = nx.betweenness_centrality(graph)
-    summary["degree_centrality"] = nx.degree_centrality(graph)
-    summary["closeness_centrality"] = nx.closeness_centrality(graph)
-    summary["eigenvector_centrality"] = nx.eigenvector_centrality(graph)
-    summary["pagerank"] = nx.pagerank(graph)
-    summary["average_clustering"] = nx.average_clustering(graph)
-    summary["average_shortest_path_length"] = nx.average_shortest_path_length(graph)
-    summary["diameter"] = nx.diameter(graph)
-    summary["radius"] = nx.radius(graph)
-    summary["periphery"] = nx.periphery(graph)
-    summary["center"] = nx.center(graph)
-    summary["density"] = nx.density(graph)
+    summary["Betweenness"] = nx.betweenness_centrality(graph)
+    summary["Degree"] = nx.degree_centrality(graph)
+    summary["Closeness"] = nx.closeness_centrality(graph)
+    summary["Eigenvector"] = nx.eigenvector_centrality(graph)
+    summary["Pagerank"] = nx.pagerank(graph)
+    summary["Katz"] = nx.katz_centrality(graph)
+    summary["Clustering"] = nx.clustering(graph)
 
     return summary
