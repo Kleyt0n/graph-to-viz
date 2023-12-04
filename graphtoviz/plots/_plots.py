@@ -13,7 +13,7 @@ def plot_graph(data, with_labels=False, node_color='gray',
         d = torch_geometric.utils.to_networkx(data)
     else :
         d = data
-    pos = nx.fruchterman_reingold_layout(d, seed=42)
+    pos = nx.spring_layout(d, k=0.3, iterations=50, seed=2)
     fig = plt.figure(figsize=(5,5))
     nx.draw(d, pos=pos, with_labels=with_labels, node_color=node_color, node_size=node_size, alpha=alpha,
             linewidths=linewidths, width=width, edge_color=edge_color, style=style, font_size=font_size,
@@ -40,7 +40,7 @@ def plot_centrality(G, measure_name, labels=False):
     if measure_name not in switch.keys():
         raise ValueError("measure_name must be one of {}".format(switch.keys()))
     measures = switch[measure_name]
-    pos = nx.spring_layout(d, seed=42)
+    pos = nx.spring_layout(d, k=0.3, iterations=50, seed=2)
     fig = plt.figure(figsize=(5,5))
     nodes = nx.draw_networkx_nodes(d, 
                                    pos, 
@@ -82,3 +82,44 @@ def plot_adjacency_matrix(data):
     cbar = ax.collections[0].colorbar
     cbar.set_ticks([0, 1])
     cbar.set_ticklabels(["Not Connected", "Connected"])
+
+def create_community_node_colors(graph, communities):
+    if not isinstance(graph, nx.Graph):
+        graph = torch_geometric.utils.to_networkx(graph)
+    else :
+        graph = graph
+    number_of_colors = len(communities[0])
+    colors = ["#8e0000", "#2238cb", "#FFC2C4", "#F2D140", "#BCC6C8"][:number_of_colors]
+    node_colors = []
+    for node in graph:
+        current_community_index = 0
+        for community in communities:
+            if node in community:
+                node_colors.append(colors[current_community_index])
+                break
+            current_community_index += 1
+    return node_colors
+
+
+def visualize_communities(graph, i):
+    if not isinstance(graph, nx.Graph):
+        graph = torch_geometric.utils.to_networkx(graph)
+    else :
+        graph = graph
+    communities = list(nx.community.girvan_newman(graph))[0]
+    node_colors = create_community_node_colors(graph, communities)
+    modularity = round(nx.community.modularity(graph, communities), 6)
+    title = f"Community Visualization of {len(communities)} communities with modularity of {modularity}"
+    pos = nx.spring_layout(graph, k=0.3, iterations=50, seed=2)
+    plt.figure(figsize=(5,5))
+    nx.draw(
+        graph,
+        pos=pos,
+        alpha = 0.8, 
+        node_size=500,
+        node_color=node_colors,
+        with_labels=True,
+        font_size=12,
+        font_color="black",
+    )
+    plt.title(title)

@@ -39,7 +39,7 @@ from graphtoviz.datasets import read_data
 
 loader = read_data(data_name)
 
-from graphtoviz.plots import plot_graph, plot_centrality, plot_adjacency_matrix
+from graphtoviz.plots import plot_graph, plot_centrality, plot_adjacency_matrix, visualize_communities
 from graphtoviz.metrics import summary_metrics
 
 
@@ -64,16 +64,18 @@ with tab1:
     
     st.markdown("## Perguntas de análise")
     st.markdown("- As métricas de centralidade são instrumento intuitivos para a interpretação de um grafo?")
-    st.markdown("- Ao introduzirmos contexto em um grafo, o entendimento melhora?")
+    st.markdown("- Ao introduzirmos contexto em um grafo, podemos melhorar a identificação de centralidades e comunidades?")
 
     st.markdown("## Avaliação das visualizações")
-    st.markdown("As avaliações foram conduzidas por meio de questionário. Com base nos datasets KarateClub e os entrevistados foram solicitados para responder às perguntas seguinta a seguinte dinâmica.")
+    st.markdown("As avaliações foram conduzidas por meio de entrevistas. Com base nos datasets KarateClub e os entrevistados foram solicitados para responder às perguntas seguinta a seguinte dinâmica.")
     st.markdown("_(sem contexto): não é explicado sobre do que se trata o grafo e o que são métricas de centralidade_")
     st.markdown("_(com contexto): descrição do problema visualizado no grafo e explicação do que as métricas de centralidade apresentam_")
     st.markdown("**KarateClub**")
     st.markdown("1. (sem contexto) Como você separaria o grafo em dois grupos de vértices?")
     st.markdown("2. (com contexto) Quais membros do clube de Karate provalmente são amigos fora do clube?")
     st.markdown("3. (com contexto) Após um conflito entre dois instrutures o clube se dividiu em dois. Quais são os membros dos novos grupos?")
+    st.markdown("4. Métricas de centralidade são fáceis de entender.")
+    st.markdown("5. Contexto me ajudou a definir melhor as comunidades no grafo.")
 
     st.markdown("## Datasets")
     st.markdown("Os dados foram obtidos através da biblioteca open-source  [PyG](https://pytorch-geometric.readthedocs.io/en/latest/modules/datasets.html)")
@@ -103,8 +105,11 @@ with tab2:
         c = plot_centrality(data, centrality_name, labels=True)
         st.pyplot(c)
 
-        st.text(f"Table with {centrality_name} ranking for {data_name} dataset")
-        metrics = summary_metrics(data)
-        tab = pd.DataFrame.from_dict(metrics[centrality_name], orient='index', columns=[centrality_name]).sort_values(by=centrality_name, ascending=False).head(10)
-        tab = tab.rename(index = {'0': 'Node'})
-        st.table(tab)
+        cm = visualize_communities(data, 1)
+        st.pyplot(cm)
+
+    st.text(f"Table with {centrality_name} ranking for {data_name} dataset")
+    metrics = summary_metrics(data)
+    tab = pd.DataFrame.from_dict(metrics[centrality_name], orient='index', columns=[centrality_name]).sort_values(by=centrality_name, ascending=False).head(10)
+    tab = tab.rename(index = {'0': 'Node'})
+    st.table(tab)
