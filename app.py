@@ -103,7 +103,7 @@ with tab1:
     st.markdown("- concordo")
 
     st.markdown("## Extra")
-    st.markdown("Abaixo segue a divisão sugerido pelo algortimo de detecção de comunidades.")
+    st.markdown("Abaixo segue a divisão sugerida pelo algoritmo de detecção de comunidades.")
     st.image('imgs/community.png')
 
 with tab2:
