@@ -2,13 +2,13 @@ from torch_geometric.datasets import TUDataset, KarateClub, Planetoid, Amazon, A
 from torch_geometric.loader import DataLoader
 
 datasets = {
-    "TUDataset": TUDataset(root='/tmp/ENZYMES', name='ENZYMES', use_node_attr=True),
+    #"TUDataset": TUDataset(root='/tmp/ENZYMES', name='ENZYMES', use_node_attr=True),
     "KarateClub": KarateClub(),
-    "Planetoid": Planetoid(root='/tmp/Cora', name="Cora"),
-    "AmazonComputers": Amazon(root='/tmp/Amazon', name = "Computers"),
-    "AmazonPhoto": Amazon(root='/tmp/Amazon', name = "Photo"),
-    "Actor": Actor(root='/tmp/Actor'),
-    "Coauthor": Coauthor(name='CS', root='/tmp/Coauthor')
+    #"Planetoid": Planetoid(root='/tmp/Cora', name="Cora"),
+    #"AmazonComputers": Amazon(root='/tmp/Amazon', name = "Computers"),
+    #"AmazonPhoto": Amazon(root='/tmp/Amazon', name = "Photo"),
+    #"Actor": Actor(root='/tmp/Actor'),
+    #"Coauthor": Coauthor(name='CS', root='/tmp/Coauthor')
     }
 
 def read_data(dataset_name):

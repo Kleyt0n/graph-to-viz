@@ -66,6 +66,12 @@ with tab1:
     st.markdown("- As métricas de centralidade são instrumento intuitivos para a interpretação de um grafo?")
     st.markdown("- Ao introduzirmos contexto em um grafo, podemos melhorar a identificação de centralidades e comunidades?")
 
+    st.markdown("## Datasets")
+    st.markdown("Os dados foram obtidos através da biblioteca open-source  [PyG](https://pytorch-geometric.readthedocs.io/en/latest/modules/datasets.html)")
+    st.markdown("Foi considerado o dataset KarateClub para ser analisado:")
+    st.markdown(" - KarateClub: esta é a conhecida rede de clubes de Karate Zachary. Os dados foram coletados dos membros de um clube universitário de Karate por Wayne Zachary em 1977. Cada nó representa um membro do clube e cada aresta representa a existeência de um relacionamento fora do Karate entre dois membros do clube. A rede não é direcionada. Ao todo a rede possui 34 vértices e 156 arestas.")
+    st.markdown("Zachary, W. W. (1977). An Information Flow Model for Conflict and Fission in Small Groups. Journal of Anthropological Research, 33(4), 452–473. doi:10.1086/jar.33.4.3629752")
+
     st.markdown("## Avaliação das visualizações")
 
     st.markdown("A avaliação foi feita a partir de uma entrevista. O entrevistado possui o seguinte perfil:")
@@ -99,12 +105,6 @@ with tab1:
     st.markdown("## Extra")
     st.markdown("Abaixo segue a divisão sugerido pelo algortimo de detecção de comunidades.")
     st.image('imgs/community.png')
-
-    st.markdown("## Datasets")
-    st.markdown("Os dados foram obtidos através da biblioteca open-source  [PyG](https://pytorch-geometric.readthedocs.io/en/latest/modules/datasets.html)")
-    st.markdown("Foi considerado o dataset KarateClub para ser analisado:")
-    st.markdown(" - KarateClub: esta é a conhecida rede de clubes de Karate Zachary. Os dados foram coletados dos membros de um clube universitário de Karate por Wayne Zachary em 1977. Cada nó representa um membro do clube e cada aresta representa a existeência de um relacionamento fora do Karate entre dois membros do clube. A rede não é direcionada. Ao todo a rede possui 34 vértices e 156 arestas.")
-    st.markdown("Zachary, W. W. (1977). An Information Flow Model for Conflict and Fission in Small Groups. Journal of Anthropological Research, 33(4), 452–473. doi:10.1086/jar.33.4.3629752")
 
 with tab2:
     col1, col2 = st.columns(2, gap="medium")
