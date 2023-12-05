@@ -13,7 +13,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.sidebar.title("graph2viz")
 
-data_name = st.sidebar.selectbox("Select dataset:", ["KarateClub", "Coauthor"])
+data_name = st.sidebar.selectbox("Select dataset:", ["KarateClub"])
 if data_name == 'KarateClub':
     name = "The data was collected from the members of a university karate club by Wayne Zachary in 1977. Each node represents a member of the club, and each edge represents a tie between two members of the club. The network is undirected. An often discussed problem using this dataset is to find the two groups of people into which the karate club split after an argument between two teachers."
 st.sidebar.caption(name)
@@ -67,19 +67,42 @@ with tab1:
     st.markdown("- Ao introduzirmos contexto em um grafo, podemos melhorar a identificação de centralidades e comunidades?")
 
     st.markdown("## Avaliação das visualizações")
-    st.markdown("As avaliações foram conduzidas por meio de entrevistas. Com base nos datasets KarateClub e os entrevistados foram solicitados para responder às perguntas seguinta a seguinte dinâmica.")
+
+    st.markdown("A avaliação foi feita a partir de uma entrevista. O entrevistado possui o seguinte perfil:")
+    st.markdown("- mestrado em Ciência da Computação pela Technische Universität Munich (TUM)")
+    st.markdown("- experiência em análise de dados")
+    st.markdown("- sem experiência com análise de grafos")
+    st.markdown("---")
+
+    st.markdown("Com base no dataset KarateClub o entrevistado foi solicitado para responder às perguntas seguindo a seguinte dinâmica.")
     st.markdown("_(sem contexto): não é explicado sobre do que se trata o grafo e o que são métricas de centralidade_")
     st.markdown("_(com contexto): descrição do problema visualizado no grafo e explicação do que as métricas de centralidade apresentam_")
     st.markdown("**KarateClub**")
     st.markdown("1. (sem contexto) Como você separaria o grafo em dois grupos de vértices?")
+    st.markdown("_Foi solicitado que ele utilizasse uma linha para separar os grupos_")
+    st.markdown("**Resposta:**")
+    st.image('imgs/q1.png')
     st.markdown("2. (com contexto) Quais membros do clube de Karate provalmente são amigos fora do clube?")
+    st.markdown("**Resposta:**")
+    st.markdown("- 0, 32 e 33 são populares. Possuem muitos amigos.")
+    st.image('imgs/q2.png')
     st.markdown("3. (com contexto) Após um conflito entre dois instrutures o clube se dividiu em dois. Quais são os membros dos novos grupos?")
+    st.markdown("_Foi solicitado que ele utilizasse uma linha para separar os grupos_")
+    st.image('imgs/q3.png')
     st.markdown("4. Métricas de centralidade são fáceis de entender.")
+    st.markdown("**Resposta:**")
+    st.markdown("- Degree: concordo plenamente")
     st.markdown("5. Contexto me ajudou a definir melhor as comunidades no grafo.")
+    st.markdown("**Resposta:**")
+    st.markdown("- concordo")
+
+    st.markdown("## Extra")
+    st.markdown("Abaixo segue a divisão sugerido pelo algortimo de detecção de comunidades.")
+    st.image('imgs/community.png')
 
     st.markdown("## Datasets")
     st.markdown("Os dados foram obtidos através da biblioteca open-source  [PyG](https://pytorch-geometric.readthedocs.io/en/latest/modules/datasets.html)")
-    st.markdown("Foram considerados dois datasets para serem analisados:")
+    st.markdown("Foi considerado o dataset KarateClub para ser analisado:")
     st.markdown(" - KarateClub: esta é a conhecida rede de clubes de Karate Zachary. Os dados foram coletados dos membros de um clube universitário de Karate por Wayne Zachary em 1977. Cada nó representa um membro do clube e cada aresta representa a existeência de um relacionamento fora do Karate entre dois membros do clube. A rede não é direcionada. Ao todo a rede possui 34 vértices e 156 arestas.")
     st.markdown("Zachary, W. W. (1977). An Information Flow Model for Conflict and Fission in Small Groups. Journal of Anthropological Research, 33(4), 452–473. doi:10.1086/jar.33.4.3629752")
     st.markdown(" - ")
