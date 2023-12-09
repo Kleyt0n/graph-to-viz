@@ -106,6 +106,9 @@ with tab1:
     st.markdown("Abaixo segue a divisão sugerida pelo algoritmo de detecção de comunidades.")
     st.image('imgs/community.png')
 
+    st.markdown("## Apreciação do trabalho")
+    st.markdown
+
 with tab2:
     col1, col2 = st.columns(2, gap="medium")
     for data in loader:
