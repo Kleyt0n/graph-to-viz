@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="G2V.png" width="100">
+<img src="graph2viz.png" width="100">
 <br>graph2viz
 </h1>
 
