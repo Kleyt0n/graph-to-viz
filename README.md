@@ -2,7 +2,7 @@
 <img src="graph2viz.png" width="300">
 </h1>
 
-**graph2viz** is an open-source platform designed to facilitate the visualization of graphs (networks), explore exploratory information, and interpret outputs from graph neural networks.
+**graph2viz** is an open-source platform designed to facilitate the visualization of graphs (networks), extract valuable information, and interpret outputs from graph neural networks.
 
 ## Features
 
