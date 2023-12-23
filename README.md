@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="logo.png" width="300">
+<img src="logo.png" width="400">
 </h1>
 
 **graphtoviz** is an open-source platform designed to facilitate the visualization of graphs (networks), extract valuable information, and interpret outputs from graph neural networks.
