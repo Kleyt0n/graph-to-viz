@@ -11,7 +11,7 @@ sys.path.append('./')
 st.set_page_config(layout="wide")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-st.sidebar.title("graph2viz")
+st.sidebar.title("graphtoviz")
 
 data_name = st.sidebar.selectbox("Select dataset:", ["KarateClub"])
 if data_name == 'KarateClub':
