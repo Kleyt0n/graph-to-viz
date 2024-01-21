@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="logo.png" width="400">
+<img src="logo.svg" width="400">
 </h1>
 
 **graphnet** is an open repository for graphs.
@@ -9,204 +9,75 @@
 
 ### Graph Algorithms
 
-| **Algorithm Type**        | **Algorithms**            |
-|---------------------------|---------------------------|
-| **Search**                | - [x] Depth First Search   |
-|                           | - [x] Breadth First Search |
-|---------------------------|---------------------------|
-| **Shortest Path**         | - [x] Dijkstra            |
-|                           | - [x] Bellman-Ford        |
-|                           | - [x] Floyd-Warshall      |
-|                           | - [x] A*                  |
-|---------------------------|---------------------------|
-| **Minimum Spanning Tree** | - [x] Prim               |
-|                           | - [x] Kruskal             |
-|---------------------------|---------------------------|
-| **Connectivity**          | - [x] Union Find          |
-|---------------------------|---------------------------|
-| **Topological Sort**      | - [x] Kahn               |
-|                           | - [x] DFS                |
-|---------------------------|---------------------------|
-| **Matching**              | - [x] Hopcroft-Karp      |
-|---------------------------|---------------------------|
-| **Graph Coloring**        | - [x] Greedy             |
-|                           | - [x] Welsh-Powell       |
-|                           | - [x] DSatur             |
-|---------------------------|---------------------------|
-| **Planarity Test**        | - [x] Boyer-Myrvold      |
-|---------------------------|---------------------------|
-| **Graph Partitioning**    | - [x] Kernighan-Lin      |
-|---------------------------|---------------------------|
-
+| **Search** | **Shortest Path** | **Minimum Spanning Tree** | **Connectivity** | **Topological Sort** | **Matching** | **Graph Coloring** | **Planarity Test** | **Graph Partitioning** |
+|------------|-------------------|---------------------------|-------------------|----------------------|--------------|--------------------|---------------------|------------------------|
+| - [x] Depth First Search | - [x] Dijkstra | - [x] Prim | - [x] Union Find | - [x] Kahn | - [x] Hopcroft-Karp | - [x] Greedy | - [x] Boyer-Myrvold | - [x] Kernighan-Lin |
+| - [x] Breadth First Search | - [x] Bellman-Ford | - [x] Kruskal | | - [x] DFS | | - [x] Welsh-Powell | | | |
 
 ### Graph Models
 
-| **Model**                 | **Description**           |
-|---------------------------|---------------------------|
-| **Random Graph**          | - [x] Erdos-Renyi          |
-|                           | - [x] Barabasi-Albert      |
-|---------------------------|---------------------------|
-| **Geometric Graph**       | - [x] Random Geometric     |
-|---------------------------|---------------------------|
-| **Grid Graph**            | - [x] Grid                 |
-|---------------------------|---------------------------|
-| **Tree Graph**            | - [x] Random Tree          |
-|---------------------------|---------------------------|
-| **Regular Graph**         | - [x] Regular              |
-|---------------------------|---------------------------|
-| **Power Law Graph**       | - [x] Power Law            |
-|---------------------------|---------------------------|
-| **Small World Graph**     | - [x] Small World          |
-|---------------------------|---------------------------|
-| **Community Graph**       | - [x] LFR                  |
-|---------------------------|---------------------------|
+| **Random Graph** | **Geometric Graph** | **Grid Graph** | **Tree Graph** | **Regular Graph** | **Power Law Graph** | **Small World Graph** | **Community Graph** |
+|------------------|---------------------|-----------------|-----------------|---------------------|----------------------|------------------------|----------------------|
+| - [x] Erdos-Renyi | - [x] Random Geometric | - [x] Grid | - [x] Random Tree | - [x] Regular | - [x] Power Law | - [x] Small World | - [x] LFR |
 
 ### Graph Analysis
 
-| **Analysis**              | **Description**           |
-|---------------------------|---------------------------|
-| **Graph Metrics**         | - [x] Degree               |
-|                           | - [x] Diameter             |
-|                           | - [x] Radius               |
-|                           | - [x] Center               |
-|                           | - [x] Periphery            |
-|                           | - [x] Girth                |
-|                           | - [x] Density              |
-|                           | - [x] Clustering Coefficient |
-|---------------------------|---------------------------|
-| **Graph Properties**      | - [x] Connected            |
-|                           | - [x] Bipartite            |
-|                           | - [x] Eulerian             |
-|                           | - [x] Hamiltonian          |
-|                           | - [x] Planar               |
-|                           | - [x] Regular              |
-|                           | - [x] Complete             |
-|                           | - [x] Tree                 |
-|---------------------------|---------------------------|
-| **Graph Centrality**      | - [x] Degree Centrality    |
-|                           | - [x] Closeness Centrality |
-|                           | - [x] Betweenness Centrality |
-|                           | - [x] Eigenvector Centrality |
-|---------------------------|---------------------------|
-| **Graph Similarity**      | - [x] Graph Edit Distance  |
-|---------------------------|---------------------------|
-| **Graph Embedding**       | - [x] Node2Vec             |
-|                           | - [x] DeepWalk             |
-|---------------------------|---------------------------|
-| **Graph Visualization**   | - [x] Force Atlas          |
-|                           | - [x] Fruchterman-Reingold |
-|---------------------------|---------------------------|
+| **Graph Metrics** | **Graph Properties** | **Graph Centrality** | **Graph Similarity** | **Graph Embedding** | **Graph Visualization** |
+|-------------------|----------------------|-----------------------|----------------------|----------------------|-------------------------|
+| - [x] Degree | - [x] Connected | - [x] Degree Centrality | - [x] Graph Edit Distance | - [x] DeepWalk | - [x] Force Atlas |
+| - [x] Diameter | - [x] Bipartite | - [x] Closeness Centrality | | - [x] Node2Vec | - [x] Fruchterman-Reingold |
+| - [x] Radius | - [x] Eulerian | - [x] Betweenness Centrality | | | |
+| - [x] Center | - [x] Hamiltonian | - [x] Eigenvector Centrality | | | |
+| - [x] Periphery | - [x] Planar | | | | |
+| - [x] Girth | - [x] Regular | | | | |
+| - [x] Density | - [x] Complete | | | | |
+| - [x] Clustering Coefficient | - [x] Tree | | | | |
 
 ### Theorems and Proofs
 
-| **Theorem**               | **Description**           |
-|---------------------------|---------------------------|
-| **Graph Theory**          | - [x] Euler's Theorem      |
-|                           | - [x] Hamiltonian Cycle    |
-|                           | - [x] Kuratowski's Theorem |
-|                           | - [x] Planar Graph         |
-|                           | - [x] Graph Coloring       |
-|                           | - [x] Graph Isomorphism    |
-|---------------------------|---------------------------|
-| **Graph Algorithms**      | - [x] Dijkstra's Algorithm |
-|                           | - [x] Bellman-Ford Algorithm |
-|                           | - [x] Floyd-Warshall Algorithm |
-|                           | - [x] Prim's Algorithm     |
-|                           | - [x] Kruskal's Algorithm  |
-|                           | - [x] Kahn's Algorithm     |
-|                           | - [x] Hopcroft-Karp Algorithm |
-|                           | - [x] Kernighan-Lin Algorithm |
-|---------------------------|---------------------------|
+| **Graph Theory** | **Graph Algorithms** |
+|-------------------|-----------------------|
+| - [x] Euler's Theorem | - [x] Dijkstra's Algorithm |
+| - [x] Hamiltonian Cycle | - [x] Bellman-Ford Algorithm |
+| - [x] Kuratowski's Theorem | - [x] Floyd-Warshall Algorithm |
+| - [x] Planar Graph | - [x] Prim's Algorithm |
+| - [x] Graph Coloring | - [x] Kruskal's Algorithm |
+| - [x] Graph Isomorphism | - [x] Kahn's Algorithm |
+| | - [x] Hopcroft-Karp Algorithm |
+| | - [x] Kernighan-Lin Algorithm |
 
 ### Real World Graphs
 
-| **Graph**                 | **Description**           |
-|---------------------------|---------------------------|
-| **Social Networks**       | - [x] Facebook            |
-|                           | - [x] Twitter             |
-|                           | - [x] Instagram           |
-|                           | - [x] Youtube             |
-|                           | - [x] Reddit              |
-|                           | - [x] Pinterest           |
-|                           | - [x] LinkedIn            |
-|                           | - [x] Github              |
-|                           | - [x] StackOverflow       |
-|                           | - [x] Wikipedia           |
-|                           | - [x] Amazon              |
-|                           | - [x] Netflix             |
-|                           | - [x] Spotify             |
-|----------------------------|---------------------------|
-| **Web Graphs**            | - [x] Google              |
-|                           | - [x] Bing                |
-|                           | - [x] Yahoo               |
-|----------------------------|---------------------------|
-| **Transportation Networks** | - [x] Road               |
-|                           | - [x] Rail                |
-|                           | - [x] Air                 |
-|                           | - [x] Sea                 |
-|----------------------------|---------------------------|
-| **Biological Networks**   | - [x] Protein-Protein     |
-|                           | - [x] Metabolic           |
-|                           | - [x] Gene Regulatory     |
-|                           | - [x] Neural              |
-|                           | - [x] Food Web            |
-|                           | - [x] Brain               |
-|                           | - [x] Disease             |
-|                           | - [x] Ecological          |
-|                           | - [x] Epidemiological     |
-|                           | - [x] Molecular           |
-|                           | - [x] Pharmacological     |
-|----------------------------|---------------------------|
-| **Information Networks**  | - [x] Citation            |
-|                           | - [x] Co-Purchase         |
-|                           | - [x] Co-Authorship       |
-|                           | - [x] Co-Occurrence       |
-|----------------------------|---------------------------|
-| **Technological Networks** | - [x] Power Grid         |
-|                           | - [x] Internet            |
-|                           | - [x] Telephone           |
-|                           | - [x] Mobile              |
-|                           | - [x] Wireless            |
-|                           | - [x] Sensor              |
-|----------------------------|---------------------------|
-| **Economic Networks**     | - [x] Trade               |
-|                           | - [x] Stock Market        |
-|                           | - [x] Input-Output        |
-|----------------------------|---------------------------|
-| **Ecological Networks**   | - [x] Food Web            |
-|                           | - [x] Mutualistic         |
-|                           | - [x] Competitive         |
-|                           | - [x] Host-Parasite       |
-|----------------------------|---------------------------|
+| **Social Networks** | **Web Graphs** | **Transportation Networks** | **Biological Networks** | **Information Networks** | **Technological Networks** | **Economic Networks** | **Ecological Networks** |
+|---------------------|----------------|-----------------------------|-------------------------|--------------------------|---------------------------|-----------------------|-------------------------|
+| - [x] Facebook | - [x] Google | - [x] Road | - [x] Protein-Protein | - [x] Citation | - [x] Power Grid | - [x] Trade | - [x] Food Web |
+| - [x] Twitter | - [x] Bing | - [x] Rail | - [x] Metabolic | - [x] Co-Purchase | - [x] Internet | - [x] Stock Market | - [x] Mutualistic |
+| - [x] Instagram | - [x] Yahoo | - [x] Air | - [x] Gene Regulatory | - [x] Co-Authorship | - [x] Telephone | - [x] Input-Output | - [x] Competitive |
+| - [x] Youtube | | - [x] Sea | - [x] Neural | - [x] Co-Occurrence | - [x] Mobile | | - [x] Host-Parasite |
+| - [x] Reddit | | | - [x] Food Web | | - [x] Wireless | | | |
+| - [x] Pinterest | | | - [x] Brain | | - [x] Sensor | | | |
+| - [x] LinkedIn | | | - [x] Disease | | | | | |
+| - [x] Github | | | - [x] Ecological | | | | | |
+| - [x] StackOverflow | | | - [x] Epidemiological | | | | | |
+| - [x] Wikipedia | | | - [x] Molecular | | | | | |
+| - [x] Amazon | | | - [x] Pharmacological | | | | | |
+| - [x] Netflix | | | | | | | | |
+| - [x] Spotify | | | | | | | | |
 
 ### Graph Neural Networks
 
-| **Model**                 | **Description**           |
-|---------------------------|---------------------------|
-| **Graph Convolutional Network** | - [x] GCN           |
-|                           | - [x] GAT                 |
-|                           | - [x] GraphSAGE           |
-|                           | - [x] GIN                 |
-|                           | - [x] Graph Attention Pooling |
-|                           | - [x] Graph U-Net         |
-|                           | - [x] Graph Isomorphism Network |
-|                           | - [x] Graph Neural Network |
-|                           | - [x] Graph Convolutional Policy Network |
-|                           | - [x] Graph Convolutional Reinforcement Learning |
-|----------------------------|---------------------------|
-| **Graph Autoencoder**     | - [x] Graph Autoencoder   |
-|                           | - [x] Variational Graph Autoencoder |
-|                           | - [x] Adversarial Graph Autoencoder |
-|----------------------------|---------------------------|
-| **Graph Generative Model** | - [x] GraphRNN          |
-|                           | - [x] GraphVAE            |
-|                           | - [x] Graphite            |
-|                           | - [x] Graph Convolutional Generative Adversarial Network |
-|----------------------------|---------------------------|
-| **Graph Embedding**       | - [x] DeepWalk            |
-|                           | - [x] Node2Vec            |
-|                           | - [x] LINE                |
-|----------------------------|---------------------------|
+| **Graph Convolutional Network** | **Graph Autoencoder** | **Graph Generative Model** | **Graph Embedding** |
+|---------------------------------|------------------------|-----------------------------|----------------------|
+| - [x] GCN | - [x] Graph Autoencoder | - [x] GraphRNN | - [x] DeepWalk |
+| - [x] GAT | - [x] Variational Graph Autoencoder | - [x] GraphVAE | - [x] Node2Vec |
+| - [x] GraphSAGE | - [x] Adversarial Graph Autoencoder | - [x] Graphite | |
+| - [x] GIN | | - [x] Graph Convolutional Generative Adversarial Network | |
+| - [x] Graph Attention Pooling | | | |
+| - [x] Graph U-Net | | | |
+| - [x] Graph Isomorphism Network | | | |
+| - [x] Graph Neural Network | | | |
+| - [x] Graph Convolutional Policy Network | | | |
+| - [x] Graph Convolutional Reinforcement Learning | | | |
 
 
 ## Local Installation
