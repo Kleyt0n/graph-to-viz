@@ -2,6 +2,8 @@
 <img src="logo.svg" width="400">
 </h1>
 
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00.svg?style=for-the-badge&logo=Buy-Me-A-Coffee&logoColor=black)](https://www.buymeacoffee.com/kleytondacosta)
+
 **graphnet** is an open repository for graphs.
 
 
