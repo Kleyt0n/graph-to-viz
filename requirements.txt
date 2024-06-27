@@ -1,8 +1,1 @@
-torch
-torch_geometric
-numpy
-pandas
-seaborn
-matplotlib
-networkx
-streamlit
+jupyter-book

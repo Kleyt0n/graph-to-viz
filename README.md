@@ -78,11 +78,3 @@
 | ✔ Graph Neural Network | | | |
 | ✔ Graph Convolutional Policy Network | | | |
 | ✔ Graph Convolutional Reinforcement Learning | | | |
-
-
-## Local Installation
-
-```bash
-sudo apt-get install ffmpeg
-pip install -r requirements.txt
-```

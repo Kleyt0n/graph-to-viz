@@ -1,0 +1,60 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Graphs in a Nutshell
+    chapters:
+    - file: chapters/basics/notation
+    - file: chapters/analysis/index
+      sections:
+      - file: chapters/analysis/metrics
+      - file: chapters/analysis/properties
+      - file: chapters/analysis/centralities
+      - file: chapters/analysis/similarity
+      - file: chapters/analysis/embedding
+      - file: chapters/analysis/visualization
+    - file: chapters/models/index
+      sections:
+      - file: chapters/models/random
+      - file: chapters/models/geometric
+      - file: chapters/models/grid
+      - file: chapters/models/tree
+      - file: chapters/models/regular
+      - file: chapters/models/power
+      - file: chapters/models/small
+      - file: chapters/models/community
+    - file: chapters/algorithms/index
+      sections:
+      - file: chapters/algorithms/search
+      - file: chapters/algorithms/shortest
+      - file: chapters/algorithms/flow
+      - file: chapters/algorithms/minimum
+      - file: chapters/algorithms/connectivity
+      - file: chapters/algorithms/topological
+      - file: chapters/algorithms/matching
+      - file: chapters/algorithms/coloring
+      - file: chapters/algorithms/planarity
+      - file: chapters/algorithms/partitioning
+  - caption: Graphs Toolbox
+    chapters:
+    - file: chapters/datasets/index
+      sections:
+      - file: chapters/datasets/social
+      - file: chapters/datasets/information
+      - file: chapters/datasets/biological
+      - file: chapters/datasets/knowledge
+    - file: chapters/toolbox/index
+      sections:
+      - file: chapters/toolbox/networkx
+      - file: chapters/toolbox/graphtool
+      - file: chapters/toolbox/neo4j
+  - caption: Information on Graphs
+    chapters:
+    - file: chapters/information/index
+    - file: chapters/information/entropy
+  - caption: Learning on Graphs
+    chapters:
+    - file: chapters/learning/index
+
